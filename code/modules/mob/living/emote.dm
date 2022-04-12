@@ -18,6 +18,7 @@
 		addtimer(TRAIT_CALLBACK_REMOVE(L, TRAIT_BLUSHING, SPECIES_TRAIT), 15 SECONDS)
 		addtimer(CALLBACK(L, /mob.proc/update_body), 15.1 SECONDS)
 		//TODO replace the two timers with just one
+		//TODO use define for blush duration
 		//addtimer(CALLBACK(L, /datum/emote/living/blush.proc/end, L), 3 SECONDS)
 
 ///datum/emote/living/blush/proc/end(mob/living)

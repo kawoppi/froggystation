@@ -439,3 +439,13 @@
 	SEND_SIGNAL(human_holder, COMSIG_ADD_MOOD_EVENT, "gamer_withdrawal", /datum/mood_event/gamer_withdrawal)
 
 #undef GAMING_WITHDRAWAL_TIME
+
+/datum/quirk/item_quirk/shy
+	name = "Shy"
+	desc = "You carry your camera and personal photo album everywhere you go, and your scrapbooks are legendary among your coworkers." //TODO
+	icon = "camera" //TODO create icon
+	value = 0
+	mob_trait = TRAIT_SHY
+	gain_text = "<span class='notice'>You know everything about photography.</span>" //TODO
+	lose_text = "<span class='danger'>You forget how photo cameras work.</span>" //TODO
+	medical_record_text = "Patient mentions photography as a stress-relieving hobby." //TODO

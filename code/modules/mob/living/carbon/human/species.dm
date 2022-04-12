@@ -583,6 +583,10 @@ GLOBAL_LIST_EMPTY(features_by_species)
 			var/mutable_appearance/blush_overlay = mutable_appearance('icons/mob/human_face.dmi', "blush", -BODY_LAYER)
 			blush_overlay.color = "#DE5D83"
 			standing += blush_overlay
+			if (HAS_TRAIT(species_human, TRAIT_SHY)) //TODO only do heavy blush on involuntary blush
+				var/mutable_appearance/blush_heavy_overlay = mutable_appearance('icons/mob/human_face.dmi', "blush_heavy", -BODY_LAYER)
+				blush_heavy_overlay.color = "#DE5D83"
+				standing += blush_heavy_overlay
 
 	// organic body markings
 	if(HAS_MARKINGS in species_traits)
