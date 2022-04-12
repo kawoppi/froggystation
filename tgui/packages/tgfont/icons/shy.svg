@@ -10,9 +10,9 @@
    <circle cx="68" cy="35" r="6" stroke="black" stroke-width="4" fill="black" />
    
    <!--left cheek-->
-   <line x1="15" y1="52" x2="20" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
-   <line x1="25" y1="52" x2="30" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
-   <line x1="35" y1="52" x2="40" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
+   <line x1="20" y1="52" x2="25" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
+   <line x1="30" y1="52" x2="35" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
+   <line x1="40" y1="52" x2="45" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
    
    <!--right cheek-->
    <line x1="55" y1="52" x2="60" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
