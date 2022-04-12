@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+   <!--face background-->
+   <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="black" />
+   
+   <!--eyes-->
+   <circle cx="32" cy="35" r="10" stroke="white" stroke-width="4" fill="white" />
+   <circle cx="68" cy="35" r="10" stroke="white" stroke-width="4" fill="white" />
+   
+   <circle cx="32" cy="35" r="6" stroke="black" stroke-width="4" fill="black" />
+   <circle cx="68" cy="35" r="6" stroke="black" stroke-width="4" fill="black" />
+   
+   <!--left cheek-->
+   <line x1="15" y1="52" x2="20" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
+   <line x1="25" y1="52" x2="30" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
+   <line x1="35" y1="52" x2="40" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
+   
+   <!--right cheek-->
+   <line x1="55" y1="52" x2="60" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
+   <line x1="65" y1="52" x2="70" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
+   <line x1="75" y1="52" x2="80" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
+</svg>
