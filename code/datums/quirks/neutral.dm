@@ -442,10 +442,10 @@
 
 /datum/quirk/item_quirk/shy
 	name = "Shy"
-	desc = "You carry your camera and personal photo album everywhere you go, and your scrapbooks are legendary among your coworkers." //TODO
-	icon = "camera" //TODO create icon
+	desc = "It's easy to make you blush." //TODO check if all features are included at the end
+	icon = "tg-shy" //TODO get the icon to actually show up
 	value = 0
 	mob_trait = TRAIT_SHY
-	gain_text = "<span class='notice'>You know everything about photography.</span>" //TODO
-	lose_text = "<span class='danger'>You forget how photo cameras work.</span>" //TODO
-	medical_record_text = "Patient mentions photography as a stress-relieving hobby." //TODO
+	gain_text = "<span class='notice'>You feel nervous around other people.</span>" //TODO
+	lose_text = "<span class='danger'>You don't feel so bashful anymore.</span>" //TODO
+	medical_record_text = "Patient has been quite timid and nervous during examinations."
