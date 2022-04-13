@@ -11,6 +11,8 @@
 	key = "blush"
 	key_third_person = "blushes"
 	message = "blushes."
+	/// Timer for blush effect to wear off
+	var/blush_timer = TIMER_ID_NULL
 
 /datum/emote/living/blush/run_emote(mob/user, params, type_override, intentional)
 	. = ..()
@@ -21,7 +23,8 @@
 
 		var/list/key_emotes = GLOB.emote_list["blush"]
 		for(var/datum/emote/living/blush/P in key_emotes)
-			addtimer(CALLBACK(P, /datum/emote/living/blush.proc/end_blush, L), BLUSH_DURATION)
+			// The existing timer restarts if it's already running
+			blush_timer = addtimer(CALLBACK(P, /datum/emote/living/blush.proc/end_blush, L), BLUSH_DURATION, TIMER_UNIQUE | TIMER_OVERRIDE)
 
 /// Removes the visual blush effect
 datum/emote/living/blush/proc/end_blush(mob/living/L)
