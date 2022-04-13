@@ -4,6 +4,9 @@
 	mob_type_allowed_typecache = /mob/living
 	mob_type_blacklist_typecache = list(/mob/living/brain)
 
+/// The time it takes for the visual blush effect to be removed
+#define BLUSH_DURATION 15 SECONDS
+
 /datum/emote/living/blush
 	key = "blush"
 	key_third_person = "blushes"
@@ -18,11 +21,14 @@
 
 		var/list/key_emotes = GLOB.emote_list["blush"]
 		for(var/datum/emote/living/blush/P in key_emotes)
-			addtimer(CALLBACK(P, /datum/emote/living/blush.proc/end_blush, L), 3 SECONDS)
+			addtimer(CALLBACK(P, /datum/emote/living/blush.proc/end_blush, L), BLUSH_DURATION)
 
+/// Removes the visual blush effect
 datum/emote/living/blush/proc/end_blush(mob/living/L)
 	REMOVE_TRAIT(L, TRAIT_BLUSHING, SPECIES_TRAIT)
 	L.update_body()
+
+#undef BLUSH_DURATION
 
 /datum/emote/living/bow
 	key = "bow"
