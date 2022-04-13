@@ -531,6 +531,7 @@
 	var/roll = rand(1, 3)
 	switch(roll)
 		if(1)
+			living_target.emote("blush", null, null, TRUE)
 			other_msg = "stumbles slightly, turning a bright red!"
 			self_msg = "You lose control of your limbs for a moment as your blood rushes to your face, turning it bright red!"
 			living_target.add_confusion(rand(5, 10))
