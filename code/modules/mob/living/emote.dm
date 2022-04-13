@@ -15,14 +15,12 @@
 		var/mob/living/L = user
 		ADD_TRAIT(L, TRAIT_BLUSHING, SPECIES_TRAIT)
 		L.update_body()
-		L.manual_emote("aaaa")//
-		addtimer(TRAIT_CALLBACK_REMOVE(L, TRAIT_BLUSHING, SPECIES_TRAIT), 15 SECONDS)
-		addtimer(CALLBACK(L, /mob.proc/update_body), 15.1 SECONDS)
-		//addtimer(CALLBACK(L, /datum/emote/living/blush.proc/end, L), 3 SECONDS)//
-		addtimer(CALLBACK(L, /mob.proc/emote, "bow"), 3 SECONDS)//
 
-datum/emote/living/blush/proc/end(mob/living/L)
-	L.manual_emote("proc called")//
+		var/list/key_emotes = GLOB.emote_list["blush"]
+		for(var/datum/emote/living/blush/P in key_emotes)
+			addtimer(CALLBACK(P, /datum/emote/living/blush.proc/end_blush, L), 3 SECONDS)
+
+datum/emote/living/blush/proc/end_blush(mob/living/L)
 	REMOVE_TRAIT(L, TRAIT_BLUSHING, SPECIES_TRAIT)
 	L.update_body()
 
