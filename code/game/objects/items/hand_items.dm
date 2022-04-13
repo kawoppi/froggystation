@@ -520,6 +520,9 @@
 	try_fluster(living_target)
 
 /obj/projectile/kiss/proc/try_fluster(mob/living/living_target)
+	// people with the shy quirk are forced to blush when hit by a kiss
+	if(HAS_TRAIT(living_target, TRAIT_SHY))
+		living_target.emote("blush")
 	// people with the social anxiety quirk can get flustered when hit by a kiss
 	if(!HAS_TRAIT(living_target, TRAIT_ANXIOUS) || (living_target.stat > SOFT_CRIT) || living_target.is_blind())
 		return
