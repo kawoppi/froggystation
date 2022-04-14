@@ -424,6 +424,9 @@
 		if(HAS_TRAIT(src, TRAIT_BADTOUCH))
 			to_chat(M, span_warning("[src] looks visibly upset as you pat [p_them()] on the head."))
 
+		if(HAS_TRAIT(src, TRAIT_SHY))
+			src.emote("blush")
+
 	else if ((M.zone_selected == BODY_ZONE_PRECISE_GROIN) && !isnull(src.getorgan(/obj/item/organ/tail)))
 		SEND_SIGNAL(src, COMSIG_CARBON_TAILPULL, M)
 		M.visible_message(span_notice("[M] pulls on [src]'s tail!"), \
@@ -434,6 +437,9 @@
 			to_chat(M, span_warning("[src] makes a grumbling noise as you pull on [p_their()] tail."))
 		else
 			SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "tailpulled", /datum/mood_event/tailpulled)
+
+		if(HAS_TRAIT(src, TRAIT_SHY))
+			src.emote("blush")
 
 	else
 		SEND_SIGNAL(src, COMSIG_CARBON_HUGGED, M)
@@ -476,6 +482,9 @@
 
 		if(HAS_TRAIT(src, TRAIT_BADTOUCH))
 			to_chat(M, span_warning("[src] looks visibly upset as you hug [p_them()]."))
+
+		if(HAS_TRAIT(src, TRAIT_SHY))
+			src.emote("blush")
 
 	adjust_status_effects_on_shake_up()
 	set_resting(FALSE)
