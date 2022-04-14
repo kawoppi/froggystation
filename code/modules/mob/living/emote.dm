@@ -26,6 +26,9 @@
 			// The existing timer restarts if it's already running
 			blush_timer = addtimer(CALLBACK(P, /datum/emote/living/blush.proc/end_blush, L), BLUSH_DURATION, TIMER_UNIQUE | TIMER_OVERRIDE)
 
+		if(HAS_TRAIT(L, TRAIT_SHY) && !intentional)
+			L.stuttering += rand(5, 15)
+
 /// Removes the visual blush effect
 datum/emote/living/blush/proc/end_blush(mob/living/L)
 	REMOVE_TRAIT(L, TRAIT_BLUSHING, SPECIES_TRAIT)
