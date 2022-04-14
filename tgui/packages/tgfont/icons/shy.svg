@@ -2,19 +2,20 @@
    <!--face background-->
    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="black" />
    
-   <!--eyes-->
+   <!--left eye-->
    <circle cx="32" cy="35" r="10" stroke="white" stroke-width="4" fill="white" />
-   <circle cx="68" cy="35" r="10" stroke="white" stroke-width="4" fill="white" />
-   
    <circle cx="32" cy="35" r="6" stroke="black" stroke-width="4" fill="black" />
+   
+   <!--right eye-->
+   <circle cx="68" cy="35" r="10" stroke="white" stroke-width="4" fill="white" />
    <circle cx="68" cy="35" r="6" stroke="black" stroke-width="4" fill="black" />
    
-   <!--left cheek-->
+   <!--left cheek markings-->
    <line x1="20" y1="52" x2="25" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
    <line x1="30" y1="52" x2="35" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
    <line x1="40" y1="52" x2="45" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
    
-   <!--right cheek-->
+   <!--right cheek markings-->
    <line x1="55" y1="52" x2="60" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
    <line x1="65" y1="52" x2="70" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
    <line x1="75" y1="52" x2="80" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
