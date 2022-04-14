@@ -579,16 +579,16 @@ GLOBAL_LIST_EMPTY(features_by_species)
 				standing += eye_overlay
 
 		// blush
-#define BLUSH_COLOR "#DE5D83"
+		#define BLUSH_COLOR "#DE5D83"
 		if (HAS_TRAIT(species_human, TRAIT_BLUSHING))
-			var/mutable_appearance/blush_overlay = mutable_appearance('icons/mob/human_face.dmi', "blush", -BODY_LAYER)
+			var/mutable_appearance/blush_overlay = mutable_appearance('icons/mob/human_face.dmi', "blush", -BODY_ADJ_LAYER) //should appear behind the eyes
 			blush_overlay.color = BLUSH_COLOR
 			standing += blush_overlay
 			if (HAS_TRAIT(species_human, TRAIT_SHY))
-				var/mutable_appearance/blush_heavy_overlay = mutable_appearance('icons/mob/human_face.dmi', "blush_heavy", -BODY_LAYER)
+				var/mutable_appearance/blush_heavy_overlay = mutable_appearance('icons/mob/human_face.dmi', "blush_heavy", -BODY_ADJ_LAYER) //should appear behind the eyes
 				blush_heavy_overlay.color = BLUSH_COLOR
 				standing += blush_heavy_overlay
-#undef BLUSH_COLOR
+		#undef BLUSH_COLOR
 
 	// organic body markings
 	if(HAS_MARKINGS in species_traits)
