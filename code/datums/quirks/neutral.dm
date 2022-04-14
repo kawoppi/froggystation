@@ -446,6 +446,6 @@
 	icon = "tg-shy" //TODO get the icon to actually show up
 	value = 0
 	mob_trait = TRAIT_SHY
-	gain_text = "<span class='notice'>You feel nervous around other people.</span>" //TODO
+	gain_text = "<span class='notice'>You feel like the slightest touch is enough to fluster you.</span>" //TODO
 	lose_text = "<span class='danger'>You don't feel so bashful anymore.</span>" //TODO
 	medical_record_text = "Patient has been quite timid and nervous during examinations."
