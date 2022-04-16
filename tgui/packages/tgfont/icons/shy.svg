@@ -1,22 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="500" height="500" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;">
    <!--face background-->
-   <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="black" />
+   <circle cx="50%" cy="50%" r="40%" stroke="black" stroke-width="4%" fill="black" mask="url(#cutouts)"/>
+
+   <!--everything covered by the white shapes from the mask will be kept, black shapes will be removed-->
+   <!--we will use this to cut out specific pieces-->
+   <defs>
+      <mask id="cutouts">
+          <!--big white square that covers everything-->
+          <rect x="0%" y="0%" width="100%" height="100%" fill="white" />
+
+          <!--left eye-->
+          <circle cx="32%" cy="35%" r="10%" stroke="black" stroke-width="4%" fill="white" />
+
+          <!--right eye-->
+          <circle cx="68%" cy="35%" r="10%" stroke="black" stroke-width="4%" fill="white" />
+          
+          <!--left cheek markings-->
+          <line x1="20%" y1="52%" x2="25%" y2="62%" style="stroke:black;stroke-width:4%;stroke-linecap:round" />
+          <line x1="30%" y1="52%" x2="35%" y2="62%" style="stroke:black;stroke-width:4%;stroke-linecap:round" />
+          <line x1="40%" y1="52%" x2="45%" y2="62%" style="stroke:black;stroke-width:4%;stroke-linecap:round" />
    
-   <!--left eye-->
-   <circle cx="32" cy="35" r="10" stroke="white" stroke-width="4" fill="white" />
-   <circle cx="32" cy="35" r="6" stroke="black" stroke-width="4" fill="black" />
-   
-   <!--right eye-->
-   <circle cx="68" cy="35" r="10" stroke="white" stroke-width="4" fill="white" />
-   <circle cx="68" cy="35" r="6" stroke="black" stroke-width="4" fill="black" />
-   
-   <!--left cheek markings-->
-   <line x1="20" y1="52" x2="25" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
-   <line x1="30" y1="52" x2="35" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
-   <line x1="40" y1="52" x2="45" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
-   
-   <!--right cheek markings-->
-   <line x1="55" y1="52" x2="60" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
-   <line x1="65" y1="52" x2="70" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
-   <line x1="75" y1="52" x2="80" y2="62" style="stroke:white;stroke-width:4;stroke-linecap:round" />
+          <!--right cheek markings-->
+          <line x1="55%" y1="52%" x2="60%" y2="62%" style="stroke:black;stroke-width:4%;stroke-linecap:round" />
+          <line x1="65%" y1="52%" x2="70%" y2="62%" style="stroke:black;stroke-width:4%;stroke-linecap:round" />
+          <line x1="75%" y1="52%" x2="80%" y2="62%" style="stroke:black;stroke-width:4%;stroke-linecap:round" />
+      </mask>
+   </defs>
 </svg>
