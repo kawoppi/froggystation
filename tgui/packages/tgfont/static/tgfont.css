@@ -1,7 +1,7 @@
 @font-face {
     font-family: "tgfont";
-    src: url("./tgfont.woff2?45c3c7acc69dd413375d77898d24e41e") format("woff2"),
-url("./tgfont.eot?45c3c7acc69dd413375d77898d24e41e#iefix") format("embedded-opentype");
+    src: url("./tgfont.woff2?a3fba9cbda8b8343dc92ed95c3d9bc85") format("woff2"),
+url("./tgfont.eot?a3fba9cbda8b8343dc92ed95c3d9bc85#iefix") format("embedded-opentype");
 }
 
 i[class^="tg-"]:before, i[class*=" tg-"]:before {
@@ -39,12 +39,18 @@ i[class^="tg-"]:before, i[class*=" tg-"]:before {
 .tg-prosthetic-leg:before {
     content: "\f108";
 }
-.tg-sound-minus:before {
+.tg-shy-simple:before {
     content: "\f109";
 }
-.tg-sound-plus:before {
+.tg-shy:before {
     content: "\f10a";
 }
-.tg-syndicate-logo:before {
+.tg-sound-minus:before {
     content: "\f10b";
+}
+.tg-sound-plus:before {
+    content: "\f10c";
+}
+.tg-syndicate-logo:before {
+    content: "\f10d";
 }
