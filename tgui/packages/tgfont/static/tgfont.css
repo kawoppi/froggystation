@@ -1,7 +1,7 @@
 @font-face {
     font-family: "tgfont";
-    src: url("./tgfont.woff2?a3fba9cbda8b8343dc92ed95c3d9bc85") format("woff2"),
-url("./tgfont.eot?a3fba9cbda8b8343dc92ed95c3d9bc85#iefix") format("embedded-opentype");
+    src: url("./tgfont.woff2?55c23db2c5b7a8c1df0cd3f0c541077b") format("woff2"),
+url("./tgfont.eot?55c23db2c5b7a8c1df0cd3f0c541077b#iefix") format("embedded-opentype");
 }
 
 i[class^="tg-"]:before, i[class*=" tg-"]:before {
