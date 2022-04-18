@@ -442,10 +442,10 @@
 
 /datum/quirk/item_quirk/shy
 	name = "Shy"
-	desc = "It's easy to make you blush." //TODO check if all features are included at the end
-	icon = "tg-shy" //TODO get the icon to actually show up
+	desc = "The slightest touch is enough to make you as red as a tomato."
+	icon = "tg-shy"
 	value = 0
 	mob_trait = TRAIT_SHY
-	gain_text = "<span class='notice'>You feel like the slightest touch is enough to fluster you.</span>" //TODO
-	lose_text = "<span class='danger'>You don't feel so bashful anymore.</span>" //TODO
+	gain_text = "<span class='notice'>You feel like the slightest touch is enough to fluster you.</span>"
+	lose_text = "<span class='danger'>You don't feel so bashful anymore.</span>"
 	medical_record_text = "Patient has been quite timid and nervous during examinations."
