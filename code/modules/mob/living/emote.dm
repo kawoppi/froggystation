@@ -19,24 +19,26 @@
 /datum/emote/living/blush/run_emote(mob/user, params, type_override, intentional)
 	. = ..()
 	if(. && isliving(user))
-		var/mob/living/L = user
-		ADD_TRAIT(L, TRAIT_BLUSHING, SPECIES_TRAIT)
-		L.update_body()
+		var/mob/living/living_user = user
+		ADD_TRAIT(living_user, TRAIT_BLUSHING, SPECIES_TRAIT)
+		living_user.update_body()
 
 		// Use a timer to remove the blush effect after the BLUSH_DURATION has passed
 		var/list/key_emotes = GLOB.emote_list["blush"]
-		for(var/datum/emote/living/blush/P in key_emotes)
-			blush_timer = addtimer(CALLBACK(P, /datum/emote/living/blush.proc/end_blush, L), BLUSH_DURATION, TIMER_UNIQUE | TIMER_OVERRIDE) // The existing timer restarts if it's already running
+		for(var/datum/emote/living/blush/living_emote in key_emotes)
+			// The existing timer restarts if it's already running
+			blush_timer = addtimer(CALLBACK(living_emote, /datum/emote/living/blush.proc/end_blush, living_user), BLUSH_DURATION, TIMER_UNIQUE | TIMER_OVERRIDE)
 
 		// Make them stutter until the blush visual goes away
-		if(HAS_TRAIT(L, TRAIT_SHY))
-			if(L.stuttering < MAX_SHY_STUTTER_DURATION / 2)
-				L.stuttering += max((MAX_SHY_STUTTER_DURATION / 2) - L.stuttering, 0) // Add up to MAX_SHY_STUTTER_DURATION seconds of stutter, depending on how much is already there
+		if(HAS_TRAIT(living_user, TRAIT_SHY))
+			if(living_user.stuttering < MAX_SHY_STUTTER_DURATION / 2)
+				// Add up to MAX_SHY_STUTTER_DURATION seconds of stutter, depending on how much is already there
+				living_user.stuttering += max((MAX_SHY_STUTTER_DURATION / 2) - living_user.stuttering, 0)
 
 /// Removes the visual blush effect
-datum/emote/living/blush/proc/end_blush(mob/living/L)
-	REMOVE_TRAIT(L, TRAIT_BLUSHING, SPECIES_TRAIT)
-	L.update_body()
+datum/emote/living/blush/proc/end_blush(mob/living/living_user)
+	REMOVE_TRAIT(living_user, TRAIT_BLUSHING, SPECIES_TRAIT)
+	living_user.update_body()
 
 #undef BLUSH_DURATION
 #undef MAX_SHY_STUTTER_DURATION
