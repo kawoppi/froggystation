@@ -6,6 +6,8 @@
 
 /// The time it takes for the visual blush effect to be removed
 #define BLUSH_DURATION 15 SECONDS
+/// The maximum amount of seconds of stutter caused by blushing while having the shy trait
+#define MAX_SHY_STUTTER_DURATION 15
 
 /datum/emote/living/blush
 	key = "blush"
@@ -21,13 +23,15 @@
 		ADD_TRAIT(L, TRAIT_BLUSHING, SPECIES_TRAIT)
 		L.update_body()
 
+		// Use a timer to remove the blush effect after the BLUSH_DURATION has passed
 		var/list/key_emotes = GLOB.emote_list["blush"]
 		for(var/datum/emote/living/blush/P in key_emotes)
-			// The existing timer restarts if it's already running
-			blush_timer = addtimer(CALLBACK(P, /datum/emote/living/blush.proc/end_blush, L), BLUSH_DURATION, TIMER_UNIQUE | TIMER_OVERRIDE)
+			blush_timer = addtimer(CALLBACK(P, /datum/emote/living/blush.proc/end_blush, L), BLUSH_DURATION, TIMER_UNIQUE | TIMER_OVERRIDE) // The existing timer restarts if it's already running
 
-		if(HAS_TRAIT(L, TRAIT_SHY) && !intentional)
-			L.stuttering += rand(5, 15)
+		// Make them stutter until the blush visual goes away
+		if(HAS_TRAIT(L, TRAIT_SHY))
+			if(L.stuttering < MAX_SHY_STUTTER_DURATION / 2)
+				L.stuttering += max((MAX_SHY_STUTTER_DURATION / 2) - L.stuttering, 0) // Add up to MAX_SHY_STUTTER_DURATION seconds of stutter, depending on how much is already there
 
 /// Removes the visual blush effect
 datum/emote/living/blush/proc/end_blush(mob/living/L)
@@ -35,6 +39,7 @@ datum/emote/living/blush/proc/end_blush(mob/living/L)
 	L.update_body()
 
 #undef BLUSH_DURATION
+#undef MAX_SHY_STUTTER_DURATION
 
 /datum/emote/living/bow
 	key = "bow"
