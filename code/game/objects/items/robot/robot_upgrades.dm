@@ -788,3 +788,8 @@
 	borgo.logevent("WARN -- System recovered from unexpected shutdown.")
 	borgo.logevent("System brought online.")
 	return ..()
+
+/obj/item/borg/upgrade/blush
+	name = "cyborg cheeck blinkers"
+	desc = "These lights can be used to emulate blushing."
+	icon_state = "cyborg_upgrade1" //TODO make icon
