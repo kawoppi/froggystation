@@ -33,6 +33,9 @@
 	worn_slot_flags = ITEM_SLOT_HEAD
 	head_icon = 'icons/mob/animal_item_head.dmi'
 	var/stepped_sound = 'sound/effects/huuu.ogg'
+	greyscale_config = /datum/greyscale_config/frog
+	greyscale_colors = "#ffffff"
+	//shift rare hue by 180
 
 /mob/living/simple_animal/hostile/retaliate/frog/Initialize(mapload)
 	. = ..()

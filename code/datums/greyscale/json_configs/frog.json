@@ -1,0 +1,10 @@
+{
+    "frog": [
+        {
+            "type": "icon_state",
+            "icon_state": "frog",
+            "blend_mode": "overlay",
+            "color_ids": [ 1 ]
+        }
+    ]
+}

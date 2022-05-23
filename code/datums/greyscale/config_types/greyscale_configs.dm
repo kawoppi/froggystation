@@ -42,6 +42,11 @@
 	name = "Space Carp, Disk in Mouth"
 	json_config = 'code/datums/greyscale/json_configs/carp_disk_mouth.json'
 
+/datum/greyscale_config/frog
+	name = "Frog"
+	icon_file = 'icons/mob/animal.dmi'
+	json_config = 'code/datums/greyscale/json_configs/frog.json'
+
 /datum/greyscale_config/wirecutters
 	name = "Wirecutters"
 	icon_file = 'icons/obj/tools.dmi'
